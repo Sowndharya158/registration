@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      
+    </head>
+    <body bgcolor=#00ffff>
+        <h1>REGISTRATION FORM</h1>
+         <div class="register">
+    <form action="action.php" method="POST" onSubmit = "return checkPassword(this)"> 
+       
+        <label for="firstname">First Name</label><br>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter you First Name" size=30/><br><br>
+        <label for="lastname">Last Name</label><br>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter your Last Name"size=30/><br><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" size=30/><br><br>
+        <label for="gender" >Gender</label><br>
+        <input type="radio" id="gender" name="gender" value="m">Male
+        <input type="radio" id="gender" name="gender" value="f">Female<br><br>
+        <label for="phno">Phone Number</label><br>
+        <input type="number" id="phno" name="phno" placeholder="Enter your Phone Number" size=30/><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter your Password" size=30><br><br>
+        <label for="confirmpassword">Confirm Password</label><br>
+        <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Re-enter your Password" size=30/><br><br>
+        
+        <input type="submit" name="submit" id="submit" value="submit" class="button">
+        <input type="reset"  name="reset" id="reset" value="reset" class="button"><br><br>
+</form>
+    </div><br><br>
+    <script>
+        document.querySelected(.'button').onclick=function(){
+            var password=document.querySelector('password').value,confirmpassword=document.querySelector('.confirmpassword').value;
+            if(password==""{
+               alert("Field cannot be empty")
+               }
+               else if(password!=confirmpassword){
+                   alert("passwords doesn't match try again")
+                   return false
+               }
+            return true
+        }
+        
+        
+        </script>
+    
+    
+    </body>
+</html>
